@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Test</title>
+
+    <a href="./src/config/db.js"></a>
+    
+</head>
+
+    <body>
+        
+
+    </body>
+    
+    
+</html>
+
+
+
+
+// // SEND USER 
+// app.post("/users",async (req,res) =>{
+
+//     try{
+
+//       const {username,firstname,lastname,password} = req.body;
+//       const user = await insertUsers(username,firstname,lastname,password)
+//       res.status(201).send(user)
+
+//     }catch(err){
+//       console.error(err);
+//       res.status(500).json({error:"Post Server Error"})
+//     }
+
+// })
+
+
+
+
+// // PUT | UDPATE USER
+// app.put("/users/:id",async (req,res)=>{
+
+//   try{
+
+//       const userId = req.params.id;
+//       const {username,firstname,lastname,password} = req.body;
+//       const user = await updateUser(userId,username,firstname,lastname,password)
+//       res.status(201).send(user)
+
+//     }catch(err){
+//       console.error(err);
+//       res.status(500).json({error:"Update Server Error"})  
+//     } 
+
+// })
+
+  
+// // GET ONLY ONE USER
+// app.get("/user/:id",async (req,res)=>{
+
+//     try{  
+      
+//       const userId = req.params.id;
+//       const user = await getUser(userId)
+//       res.send({message:`Hello ${user.username} | `,user})
+      
+//     }catch(err){
+//       console.error(err);
+//       res.status({message: `Hi User ${userId}`})
+//     }   
+
+// })
+
+
+
+
+
+
