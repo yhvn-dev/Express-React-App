@@ -1,7 +1,10 @@
+
 import express from "express";
 import {descTable,getAllUsers,getUser,insertUsers,updateUser,deleteUser} from "./src/models/user.model.js";
 const app = express();
 app.use(express.json());
+
+
 
 // TEST API
 app.get("/api", (req, res) => {
@@ -14,20 +17,15 @@ app.get("/api", (req, res) => {
 });
 
 // GET ALL USER
-app.get("/users",async(req,res)=>{
-
-  try{
-    
+app.get("/users", async (req,res)=>{
+  try {
     const users = await getAllUsers();
-    res.json(users);
-
-  }catch(err){
+    res.json({ users });
+  } catch(err) {
     console.error(err);
-    res.status(500).json({error:"Internal Server Error"})
+    res.status(500).json({error:"Internal Server Error"});
   }
-
 });
-
 
 
 // GET ONE USER
